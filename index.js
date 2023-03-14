@@ -10,9 +10,11 @@ console.log(navList, navBtn, hamburger);
 hamburger.addEventListener("click", function () {
   console.log("clicked");
   navBar.classList.toggle("open");
+  navBar.classList.toggle("navHeight");
 });
 
 //resize event to return all classes to normal upon a change in screen size
 window.addEventListener("resize", function () {
   navBar.classList.remove("open");
+  navBar.classList.add("navHeight");
 });

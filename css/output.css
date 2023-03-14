@@ -513,16 +513,26 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mb-14 {
   margin-bottom: 3.5rem;
 }
 
-.mb-7 {
-  margin-bottom: 1.75rem;
+.mb-3 {
+  margin-bottom: 0.75rem;
 }
 
-.mt-1 {
-  margin-top: 0.25rem;
+.mb-7 {
+  margin-bottom: 1.75rem;
 }
 
 .mt-5 {
@@ -537,8 +547,8 @@ video {
   display: flex;
 }
 
-.h-6 {
-  height: 1.5rem;
+.w-40 {
+  width: 10rem;
 }
 
 .justify-between {
@@ -550,13 +560,37 @@ video {
      object-fit: fill;
 }
 
+.align-middle {
+  vertical-align: middle;
+}
+
 body {
   font-family: Public Sans, sans-serif;
 }
 
 .open {
   margin-top: 2.5rem;
-  height: 100vh;
+  height: 100dvh;
+}
+
+.navHeight {
+  height: 0px;
+}
+
+@media (min-width: 1024px) {
+  .navHeight {
+    height: auto;
+  }
+}
+
+.text {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .text {
+    text-align: left;
+  }
 }
 
 /**/
@@ -569,12 +603,10 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  --tw-bg-opacity: 1;
-  background-color: rgb(253 224 71 / var(--tw-bg-opacity));
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 @media (min-width: 1024px) {
@@ -582,33 +614,42 @@ header {
     flex-direction: row;
     padding-left: 5rem;
     padding-right: 5rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 
+.hamburger {
+  margin-top: 0.25rem;
+  height: 1rem;
+}
+
 .navLogo {
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
   height: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .navLogo {
+    margin-top: 1.75rem;
+  }
 }
 
 .navbar {
   display: flex;
-  height: 0px;
   width: 100%;
   flex-direction: column;
   gap: 2.5rem;
   overflow: hidden;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
+  transition-duration: 150ms;
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 @media (min-width: 1024px) {
   .navbar {
     margin-top: 0px;
-    height: auto;
     width: auto;
     flex-direction: row;
     gap: 5rem;
@@ -617,7 +658,7 @@ header {
 }
 
 .navList {
-  margin-top: 0.25rem;
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
@@ -628,6 +669,7 @@ header {
 
 @media (min-width: 1024px) {
   .navList {
+    margin-top: 0.5rem;
     flex-direction: row;
     gap: 1.25rem;
     font-size: 1rem;
@@ -635,11 +677,41 @@ header {
   }
 }
 
+.navText {
+  cursor: pointer;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 600;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 100ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+@media (min-width: 1024px) {
+  .navText {
+    border-bottom-width: 4px;
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(255 255 255 / var(--tw-border-opacity));
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    font-weight: 400;
+  }
+
+  .navText:hover {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(56 173 87 / var(--tw-border-opacity));
+  }
+}
+
 .requestBtn {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  width: 83.333333%;
+  height: 2.5rem;
+  width: 66.666667%;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(56 173 87 / var(--tw-bg-opacity));
@@ -659,16 +731,14 @@ header {
 
 .requestBtn:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(29 78 216 / var(--tw-text-opacity));
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 1024px) {
   .requestBtn {
     margin-left: 0px;
     margin-right: 0px;
-    margin-top: 0px;
+    margin-top: 1.25rem;
     width: auto;
   }
 }
@@ -680,8 +750,6 @@ header {
   flex-direction: column-reverse;
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
-  padding-left: 5rem;
-  padding-right: 5rem;
 }
 
 @media (min-width: 1024px) {
@@ -691,21 +759,52 @@ header {
 }
 
 .section1-text {
-  margin-top: 5rem;
-  width: 33.333333%;
+  margin-top: 2.5rem;
+  width: 100%;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+@media (min-width: 1024px) {
+  .section1-text {
+    margin-top: 7rem;
+    width: 50%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
 }
 
 .section1-heading {
   margin-bottom: 1.75rem;
-  font-size: 3rem;
-  line-height: 1;
+  text-align: center;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
   font-weight: 300;
   --tw-text-opacity: 1;
   color: rgb(22 163 74 / var(--tw-text-opacity));
 }
 
+@media (min-width: 1024px) {
+  .section1-heading {
+    text-align: left;
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
 .section1-img {
-  width: 50%;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .section1-img {
+    width: 50%;
+  }
+}
+
+.bg-img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*SECTION 2*/
@@ -713,29 +812,70 @@ header {
 .section2 {
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
-  padding: 5rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .section2 {
+    padding: 5rem;
+  }
 }
 
 .sectionHeading {
   margin-bottom: 1.25rem;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+  text-align: center;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+@media (min-width: 1024px) {
+  .sectionHeading {
+    text-align: left;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 .section-group {
   display: flex;
+  flex-direction: column;
   gap: 1.75rem;
 }
 
+@media (min-width: 1024px) {
+  .section-group {
+    flex-direction: row;
+  }
+}
+
 .cardImg {
+  margin-left: auto;
+  margin-right: auto;
   width: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .cardImg {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 .cardHeading {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+  text-align: center;
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .cardHeading {
+    text-align: left;
+  }
 }
 
 /*SECTION 3*/
@@ -743,7 +883,16 @@ header {
 .section3 {
   --tw-bg-opacity: 1;
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
-  padding: 5rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .section3 {
+    padding: 5rem;
+  }
 }
 
 .article {
@@ -784,29 +933,60 @@ header {
 
 footer {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-  padding: 5rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5rem;
+  }
 }
 
 .footerGrp {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  text-align: center;
 }
 
 .socialTags {
   margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 1.25rem;
 }
 
 @media (min-width: 1024px) {
+  .socialTags {
+    margin-bottom: 0px;
+  }
+
+  .lg\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:w-auto {
+    width: auto;
   }
 }

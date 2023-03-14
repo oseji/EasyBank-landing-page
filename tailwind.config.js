@@ -12,6 +12,8 @@ module.exports = {
         100: "400px",
         150: "500px",
         200: "600px",
+        screenDevice: "100dvh",
+        screenSmall: "100svh",
       },
       colors: {
         limeGreen: "#38AD57",

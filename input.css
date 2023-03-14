@@ -7,7 +7,15 @@ body {
 }
 
 .open {
-  @apply h-screen mt-10;
+  @apply h-screenDevice mt-10;
+}
+
+.navHeight {
+  @apply h-0 lg:h-auto;
+}
+
+.text {
+  @apply text-center lg:text-left;
 }
 
 /**/
@@ -15,64 +23,76 @@ body {
 
 /*HEADER*/
 header {
-  @apply bg-yellow-300 flex  flex-col lg:flex-row justify-between  px-2 py-4 lg:px-20 lg:py-2;
+  @apply flex  flex-col lg:flex-row justify-between  px-2 lg:px-20 py-5 lg:py-0;
+}
+
+.hamburger {
+  @apply h-4 mt-1;
 }
 
 .navLogo {
-  @apply h-5 mt-2;
+  @apply h-5 mt-1 lg:mt-7;
 }
 
 .navbar {
-  @apply flex flex-col lg:flex-row gap-10 lg:gap-20 w-full h-0 lg:mt-0 overflow-hidden lg:h-auto lg:overflow-visible lg:w-auto  transition-all ease-in duration-200;
+  @apply flex flex-col lg:flex-row gap-10 lg:gap-20 w-full  lg:mt-0 overflow-hidden  lg:overflow-visible lg:w-auto  transition-all ease-in duration-150;
 }
 
 .navList {
-  @apply flex flex-col lg:flex-row gap-10 lg:gap-5 mt-1 text-center text-xl lg:text-base;
+  @apply flex flex-col lg:flex-row gap-10 lg:gap-5 mt-0 lg:mt-2 text-center text-xl lg:text-base;
+}
+
+.navText {
+  @apply font-semibold lg:font-normal py-4 lg:py-5 lg:border-b-4 lg:border-b-white lg:hover:border-b-limeGreen transition ease-in duration-100  cursor-pointer;
 }
 
 .requestBtn {
-  @apply bg-limeGreen text-white px-7 py-2 rounded-full hover:bg-white hover:text-blue-700 transition ease-in duration-200  w-10/12 lg:w-auto mx-auto block lg:mx-0  lg:mt-0;
+  @apply bg-limeGreen hover:bg-green-400 text-white px-7  py-2 rounded-full transition ease-in duration-200 h-10 w-2/3 lg:w-auto mx-auto block lg:mx-0  lg:mt-5;
 }
 
 /*SECTION 1*/
 .section1 {
-  @apply px-20 flex flex-col-reverse lg:flex-row bg-slate-200;
+  @apply flex flex-col-reverse lg:flex-row bg-slate-200;
 }
 
 .section1-text {
-  @apply w-1/3 mt-20;
+  @apply px-7 lg:px-20 w-full lg:w-1/2 mt-10 lg:mt-28;
 }
 .section1-heading {
-  @apply text-5xl font-light mb-7 text-green-600;
+  @apply text-4xl lg:text-5xl font-light mb-7 text-center lg:text-left text-green-600;
 }
 
 .section1-img {
-  @apply w-1/2;
+  @apply w-full lg:w-1/2;
+}
+
+.bg-img {
+  @apply object-cover;
 }
 
 /*SECTION 2*/
 .section2 {
-  @apply p-20 bg-slate-200;
+  @apply px-7 py-20 lg:p-20 bg-slate-200;
 }
 .sectionHeading {
-  @apply text-4xl mb-5;
+  @apply text-3xl lg:text-4xl mb-5 text-center lg:text-left;
 }
 
 .section-group {
-  @apply flex gap-7;
+  @apply flex flex-col lg:flex-row gap-7;
 }
 
 .cardImg {
-  @apply w-16;
+  @apply w-16 mx-auto lg:mx-0;
 }
 
 .cardHeading {
-  @apply text-2xl my-5;
+  @apply text-2xl text-center lg:text-left my-5;
 }
 
 /*SECTION 3*/
 .section3 {
-  @apply p-20 bg-slate-100;
+  @apply px-7 py-20 lg:p-20 bg-slate-100;
 }
 
 .article {
@@ -97,13 +117,13 @@ header {
 
 /*FOOTER*/
 footer {
-  @apply flex justify-between p-20 bg-slate-900 text-white;
+  @apply flex flex-col lg:flex-row lg:justify-between  px-7 py-20 lg:p-20 bg-slate-900 text-white;
 }
 
 .footerGrp {
-  @apply flex flex-col gap-3;
+  @apply flex flex-col gap-3 text-center;
 }
 
 .socialTags {
-  @apply flex flex-row gap-2 mt-10;
+  @apply flex flex-row  gap-5 my-10 lg:mb-0 mx-auto;
 }
