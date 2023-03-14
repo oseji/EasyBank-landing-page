@@ -19,6 +19,9 @@ module.exports = {
         brightCyan: "#2BB7DA",
         grayishBlue: "#9698A6",
       },
+      fontFamily: {
+        easyBank: ["Public Sans", "sans-serif"],
+      },
     },
   },
   plugins: [],

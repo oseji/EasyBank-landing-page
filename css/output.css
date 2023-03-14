@@ -513,8 +513,24 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
+.mb-7 {
+  margin-bottom: 1.75rem;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-7 {
+  margin-top: 1.75rem;
 }
 
 .flex {
@@ -529,6 +545,15 @@ video {
   justify-content: space-between;
 }
 
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+body {
+  font-family: Public Sans, sans-serif;
+}
+
 .open {
   margin-top: 2.5rem;
   height: 100vh;
@@ -537,6 +562,8 @@ video {
 /**/
 
 /**/
+
+/*HEADER*/
 
 header {
   display: flex;
@@ -572,7 +599,6 @@ header {
   flex-direction: column;
   gap: 2.5rem;
   overflow: hidden;
-  font-weight: 600;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 200ms;
@@ -609,7 +635,7 @@ header {
   }
 }
 
-.navBtn {
+.requestBtn {
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -621,7 +647,6 @@ header {
   padding-right: 1.75rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
@@ -632,7 +657,7 @@ header {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
-.navBtn:hover {
+.requestBtn:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -640,13 +665,147 @@ header {
 }
 
 @media (min-width: 1024px) {
-  .navBtn {
+  .requestBtn {
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0px;
     width: auto;
   }
+}
 
+/*SECTION 1*/
+
+.section1 {
+  display: flex;
+  flex-direction: column-reverse;
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .section1 {
+    flex-direction: row;
+  }
+}
+
+.section1-text {
+  margin-top: 5rem;
+  width: 33.333333%;
+}
+
+.section1-heading {
+  margin-bottom: 1.75rem;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 300;
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
+.section1-img {
+  width: 50%;
+}
+
+/*SECTION 2*/
+
+.section2 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+  padding: 5rem;
+}
+
+.sectionHeading {
+  margin-bottom: 1.25rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.section-group {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.cardImg {
+  width: 4rem;
+}
+
+.cardHeading {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+/*SECTION 3*/
+
+.section3 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+  padding: 5rem;
+}
+
+.article {
+  border-radius: 0.5rem;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.articleImg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.article-TextContainer {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 0.75rem;
+}
+
+.authorName {
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+}
+
+.topic {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+/*FOOTER*/
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  padding: 5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.footerGrp {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.socialTags {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+@media (min-width: 1024px) {
   .lg\:hidden {
     display: none;
   }
